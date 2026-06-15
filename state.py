@@ -35,4 +35,4 @@ def divide(a: int, b: int) -> float:
 
 graph = StateGraph(State)
 
-graph.add_node('addition', addition)
+graph.add_node('addition', addition_node)
