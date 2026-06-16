@@ -1,3 +1,24 @@
+# Langchain = Tools + LLMs + Chains
+# LangGraph = State + workflow + Decision Making
+
+# User Question
+#       |
+#       v
+#  Retrieve Docs
+#       |
+#       v
+#  Evaluate Docs
+#       |
+#       +----> Good Docs ----> Generate Answer
+#       |
+#       +----> Bad Docs ----> Rewrite Query
+#                               |
+#                               v
+#                          Retrieve Again
+
+# By using LangGraph we can easily buld decision making workflow
+
+
 from typing import TypedDict
 from langgraph.graph import StateGraph, START, END
 
@@ -73,7 +94,6 @@ graph.add_edge('subtraction', 'multiply')
 graph.add_edge('multiply', 'divide')
 graph.add_edge('divide', END)
 graph = graph.compile()
-# graph.invoke({'a':10,'b':20})
 result = graph.invoke(
     {
         "a": 10,
