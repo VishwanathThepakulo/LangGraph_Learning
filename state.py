@@ -19,6 +19,23 @@
 # By using LangGraph we can easily buld decision making workflow
 
 
+# Step 1: State Concept 
+
+
+# from typing import TypedDict
+
+# class State(TypedDict):
+#     question : str
+#     docs : list
+#     answer : str
+
+# State means data which is travelling in workflow
+
+# Nodes will update the state
+
+
+    
+
 from typing import TypedDict
 from langgraph.graph import StateGraph, START, END
 
